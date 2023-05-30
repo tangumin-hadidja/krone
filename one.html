@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">кнопочка</button>
+    <script>
+        let button = document.getElementById('btn');
+        button.counter = 0
+        const body = document.body;
+        btn.onclick = function(){
+            this.counter++
+            console.log('Нажали на кнопочку x' + this.counter);
+            body.style.backgroundColor = 'red';
+            changeBG(this)
+        }
+        button.style.border = 'none';
+        button.style.display = 'block';
+        button.style.fontSize = '20px';
+        button.style.background = 'blue';
+        button.style.color = '#fff';
+        button.style.width = '200px';
+        button.style.height = '60px';
+        button.style.cursor = 'pointer';
+        button.style.outline = 'none';
+        button.style.margin = 'auto';
+        function changeBG(tag) {
+            if(tag.counter % 2){
+                body.style.backgroundColor = 'red';
+            }
+            else{
+                body.style.backgroundColor = 'yellow';
+            }
+        }
+    </script>
+</body>
+</html>
